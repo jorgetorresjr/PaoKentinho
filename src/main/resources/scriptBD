@@ -1,0 +1,17 @@
+create database paoKentinho;
+
+use paoKentinho;
+
+CREATE TABLE pao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(30) NOT NULL,
+    descricao TEXT,
+    tempo_forno INT NOT NULL
+);
+
+CREATE TABLE fornada (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pao_id INT NOT NULL,
+    horario_saida TIME NOT NULL,
+    FOREIGN KEY (pao_id) REFERENCES pao(id)
+);
