@@ -1,10 +1,14 @@
 package org.padaria.paokentinho.models.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalTime;
 
 public class Fornada {
     private Integer id;
     private final Pao pao;
+
+    @JsonFormat(pattern = "HH:mm:ss")
     private final LocalTime horarioSaida;
 
     public Fornada(Pao pao) {

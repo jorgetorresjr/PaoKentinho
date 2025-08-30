@@ -32,7 +32,7 @@ public class FornadaController {
 
             this.facade.create(fornada);
 
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(fornada);
         } catch (SQLException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
